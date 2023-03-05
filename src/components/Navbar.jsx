@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {AiOutlineApartment, AiOutlineBook, AiOutlineContacts, AiOutlineHome} from "react-icons/ai"
 const Navbar = () => {
+
+  const [dark,setDark] = useState(" ")
+
+  window.addEventListener("scroll",()=>{
+    window.scrollY > 300 && setDark('dark-navbar')
+    window.scrollY < 300 && setDark(' ')
+  })
+
   return (
-    <nav className='navbar-container'>
+    <nav className={`navbar-container ${dark}`}>
         <div className="logo">
                 <h1>F<span>aiz</span></h1>
         </div>
