@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from 'react'
-import img1 from '../../images/4.webp'
+import img1 from '../../images/4.jpg'
 import { TypeAnimation } from 'react-type-animation';
+
+import SocialLinks from '../SocialLinks';
+
 const Home = () => {
 
-  const [slider, setSlider] = useState(1)
+  // const [slider, setSlider] = useState(1)
 
-  const sliderMet = () => {
-    // slider ? 
-    // setSlider(slider+1);
-  }
+  // const sliderMet = () => {
+  //   slider &&
+  //   setSlider(slider+1)
+  // }
 
   // useEffect(()=>{
 
-  setInterval(() => {
-    sliderMet();
-  }, 5000)
+  // setInterval(() => {
+  //   sliderMet();
+  // }, 5000)
   // },[])
 
   return (
@@ -30,18 +33,16 @@ const Home = () => {
           <h4>Hello, I Am</h4>
           <h5>Faiz</h5>
           <h6>
-            
             <TypeAnimation
               sequence={[
-                'Developer', // Types 'One'
-                1000, // Waits 1s
-                'Programmer', // Deletes 'One' and types 'Two'
-                1000, // Waits 2s
-                'Coder', // Types 'Three' without deleting 'Two'
-                1000, // Waits 2s
+                '<Developer/>',
+                1000,
+                '<Programmer/>',
+                1000,
+                '<Coder/>',
+                1000,
               ]}
-              // speed={99}
-              wrapper="h6"
+              // wrapper="h6"
               cursor={true}
               repeat={Infinity}
               className="type-animation"
@@ -49,8 +50,10 @@ const Home = () => {
           </h6>
         </div>
 
-
+        <SocialLinks/>
       </div>
+
+
     </section>
   )
 }
