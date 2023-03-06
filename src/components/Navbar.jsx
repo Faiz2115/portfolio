@@ -27,9 +27,9 @@ const Navbar = () => {
                         <a href="#">
                         <AiOutlineBook  className='icons'/>
                         Portfolio</a>
-                        <a href="#">
+                        {/* <a href="#">
                         <AiOutlineApartment  className='icons'/>
-                        Certificates</a>
+                        Certificates</a> */}
                         <a href="#">
                         <AiOutlineContacts  className='icons'/>
                         Templates</a>

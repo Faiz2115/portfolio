@@ -278,28 +278,29 @@ html {
 .project-container .title {
   grid-row: 2/3;
   grid-column: 2/5;
-  position: relative;
   place-self: center;
-  display: flex;
-  justify-content: center;
-  align-content: center;
 }
 .project-container .title h1 {
-  font-size: 3rem;
-  opacity: 0.1;
-  letter-spacing: 2rem;
-  text-transform: uppercase;
-}
-.project-container .title h2 {
+  position: relative;
   align-self: center;
-  position: absolute;
   text-transform: uppercase;
   font-size: 2rem;
   letter-spacing: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.project-container .title h2 span {
+.project-container .title h1 span {
   margin: 0.3rem;
   color: #dc2f08;
+}
+.project-container .title h1::before {
+  content: "Projects";
+  position: absolute;
+  font-size: 3rem;
+  opacity: 0.1;
+  letter-spacing: 2.5rem;
+  text-transform: uppercase;
 }
 .project-container .latest {
   grid-row: 3/4;
@@ -368,6 +369,236 @@ html {
   box-shadow: 0 0 20px 1px rgb(57, 55, 55);
 }
 
+.skills-container {
+  height: auto;
+  width: 100%;
+  background-color: whitesmoke;
+  display: grid;
+  grid-template-columns: 5rem 1fr 5rem;
+  grid-template-rows: 3rem 1fr 4fr 7rem;
+}
+.skills-container .title {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  place-self: center;
+}
+.skills-container .title h1 {
+  position: relative;
+  align-self: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skills-container .title h1 span {
+  margin: 0.3rem;
+  color: #dc2f08;
+}
+.skills-container .title h1::before {
+  content: "Skills";
+  position: absolute;
+  font-size: 3rem;
+  opacity: 0.1;
+  letter-spacing: 2.5rem;
+  text-transform: uppercase;
+}
+.skills-container .skills {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.skills-container .skills .container {
+  width: 20%;
+  height: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: 2s slideLeft ease;
+}
+.skills-container .skills .container .circular-progress {
+  position: relative;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.skills-container .skills .container .circular-progress::before {
+  content: "";
+  position: absolute;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  background-color: white;
+}
+.skills-container .skills .container .circular-progress .progress-value {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  color: #dc2f08;
+}
+.skills-container .skills .container .text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #513f3a;
+  margin: 1rem 0 0 0;
+}
+
+.quotes-section {
+  width: 100%;
+  height: auto;
+  padding: 4rem 10rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  gap: 0.5rem;
+}
+.quotes-section .title {
+  place-self: center;
+  grid-column: 2/3;
+  animation: pop 1.5s ease-in-out;
+}
+.quotes-section .title h1 {
+  color: #dc2f08;
+  position: relative;
+  align-self: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #dc2f08;
+}
+.quotes-section .title h1::before {
+  content: "Quotes";
+  position: absolute;
+  font-size: 3rem;
+  opacity: 0.1;
+  letter-spacing: 2.5rem;
+  text-transform: uppercase;
+}
+.quotes-section .box1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  border-top: 10rem solid #dc2f08;
+  border-right: 30rem solid transparent;
+  animation: slideLeft 1s ease;
+}
+.quotes-section .box2 {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  border-top: 10rem solid #dc2f08;
+  border-left: 30rem solid transparent;
+  animation: slideRight 1s ease;
+}
+.quotes-section .box3 {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  border-bottom: 10rem solid #dc2f08;
+  border-right: 30rem solid transparent;
+  animation: slideLeft 1s ease;
+}
+.quotes-section .box4 {
+  border-bottom: 10rem solid #dc2f08;
+  border-left: 30rem solid transparent;
+  grid-column: 3/4;
+  grid-row: 3/4;
+  animation: slideRight 1s ease;
+}
+.quotes-section .quote {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  place-self: center;
+  text-align: center;
+}
+.quotes-section .quote h1 {
+  font-size: 1.8rem;
+  padding: 1rem;
+  animation: pop 1.5s ease-in-out;
+}
+.quotes-section .quote button {
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  border: none;
+  padding: 0.4rem 1rem;
+  margin: 0.4rem;
+  border-radius: 0.2rem;
+  background-color: #dc2f08;
+  color: whitesmoke;
+  font-weight: 600;
+  cursor: pointer;
+}
+.quotes-section .quote button:hover {
+  background-color: #ec4f2c;
+  transform: translateY(-1px);
+}
+
+.footer-container {
+  background-color: #2d2b2a;
+  height: auto;
+  width: 100%;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 5rem 1fr 5rem;
+  grid-template-rows: 2fr 1fr;
+}
+.footer-container .top-footer {
+  grid-column: 2/3;
+  place-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-container .top-footer .line {
+  width: 10rem;
+  height: 0.1rem;
+  background-color: rgb(249, 247, 247);
+}
+.footer-container .top-footer h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.3rem;
+  margin: 0.5rem 5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+}
+.footer-container .top-footer h1::before {
+  text-transform: uppercase;
+  opacity: 0.2;
+  font-size: 3.5rem;
+  position: absolute;
+  content: "FAiz";
+  letter-spacing: 1rem;
+  color: white;
+}
+.footer-container .bottom-footer {
+  grid-column: 2/3;
+  place-self: center;
+}
+.footer-container .bottom-footer h1 {
+  align-self: center;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  color: white;
+}
+.footer-container .bottom-footer h1 span {
+  font-size: 1.5rem;
+  margin: 0.3rem;
+  color: #dc2f08;
+}
+
 .back-to-top {
   position: fixed;
   bottom: 1.5rem;
@@ -377,7 +608,11 @@ html {
   color: #dc2f08;
   font-size: 2rem;
   cursor: pointer;
+  transition: 1s all ease;
   animation: top-button 0.4s ease-in-out;
+}
+.back-to-top:hover {
+  transform: translateY(-0.3rem);
 }
 
 @keyframes slideTop {
@@ -435,5 +670,15 @@ html {
   100% {
     transform: translateY(-0.8rem);
     box-shadow: 1px 1px 30px 0px rgb(73, 73, 81);
+  }
+}
+@keyframes pop {
+  from {
+    opacity: 0.3;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }/*# sourceMappingURL=style.css.map */

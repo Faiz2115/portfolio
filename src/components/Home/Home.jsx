@@ -1,30 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import img1 from '../../images/4.jpg'
 import { TypeAnimation } from 'react-type-animation';
-
 import SocialLinks from '../SocialLinks';
 
 const Home = () => {
 
-  // const [slider, setSlider] = useState(1)
-
-  // const sliderMet = () => {
-  //   slider &&
-  //   setSlider(slider+1)
-  // }
-
-  // useEffect(()=>{
-
-  // setInterval(() => {
-  //   sliderMet();
-  // }, 5000)
-  // },[])
 
   return (
     <section className="home-container">
       <div className="images">
         <img src={img1} alt="" />
-        {/* <img src={img2} alt="" /> */}
 
       </div>
 
