@@ -1,49 +1,34 @@
 import React, { useState } from 'react'
-import {AiOutlineApartment, AiOutlineBook, AiOutlineContacts, AiOutlineHome} from "react-icons/ai"
+import { NavLink,Link } from 'react-router-dom'
 const Navbar = () => {
 
-  const [dark,setDark] = useState(" ")
+  const [dark, setDark] = useState(" ")
 
-  window.addEventListener("scroll",()=>{
+  window.addEventListener("scroll", () => {
     window.scrollY > 300 && setDark('dark-navbar')
     window.scrollY < 300 && setDark(' ')
   })
 
   return (
     <nav className={`navbar-container ${dark}`}>
-        <div className="logo">
-                <h1>F<span>aiz</span></h1>
-        </div>
-        <div className="navlinks">
-                <ul>
-                    <li>
-                        <a href="#" >
-                       <AiOutlineHome className='icons'/>
-                        Home
-                        </a>
-                        <a href="#" >
-                        <AiOutlineBook className='icons'/>
-                        About</a>
-                        <a href="#">
-                        <AiOutlineBook  className='icons'/>
-                        Portfolio</a>
-                        {/* <a href="#">
-                        <AiOutlineApartment  className='icons'/>
-                        Certificates</a> */}
-                        <a href="#">
-                        <AiOutlineContacts  className='icons'/>
-                        Templates</a>
-                        <a href="#">
-                        <AiOutlineContacts  className='icons'/>
-                        Contact</a>
-                    </li>
-                </ul>
-        </div>
+      <Link to ='/' className="logo">
+        <h1>F<span>aiz</span></h1>
+      </Link>
+      <div className="navlinks">
+        <ul>
+          <li>
+            <NavLink to="/" >Home</NavLink>
+            <NavLink to="portfolio" >Portfolio</NavLink>
+            <NavLink to="templates" >Templates</NavLink>
+            <NavLink to="contact" >Contact</NavLink>
+          </li>
+        </ul>
+      </div>
 
-        <div className="blog">
-            <a href="#">Blog</a>
+      <div className="blog">
+      <NavLink to="/blog" >Blog</NavLink>
 
-        </div>
+      </div>
     </nav>
   )
 }

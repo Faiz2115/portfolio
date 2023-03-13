@@ -1,22 +1,21 @@
-import AboutMe from "./components/Home/AboutMe";
-import Home from "./components/Home/Home"
-import Navbar from './components/Navbar';
-import BackToUpButton from "./components/BackToUpButton"
-import Projects from "./components/Home/Projects";
-import Skills from "./components/Home/Skills";
-import Quotes from "./components/Home/Quotes";
-import Footer from "./components/Footer";
-const App = ()=> {
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from "./components/Layout";
+import Home from './pages/Home';
+import Portfolio from './pages/Portfolio';
+const App = () => {
   return (
     <>
-      <Navbar/>
-      <Home/>
-      <AboutMe/>
-      <Projects/>
-      <Skills/>
-      <Quotes/>
-      <Footer/>
-      <BackToUpButton/>
+
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path='portfolio' element={<Portfolio/>} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+
+
     </>
   );
 }

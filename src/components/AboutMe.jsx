@@ -1,7 +1,5 @@
 import React from 'react'
-import img1 from '../../images/4.jpg'
-import resume from "../../resume/Faizan.pdf"
-import SocialLinks from '../SocialLinks'
+import SocialLinks from './SocialLinks'
 
 const AboutMe = () => {
     return (
@@ -30,13 +28,13 @@ const AboutMe = () => {
                 <p>Software Engineer with excellent problem solving skills & ability to perform well in
                     a team.Passionate about coding & eagerly learnings new skills.</p>
 
-                <a href={resume} download>
+                <a href='./Faizan.pdf' download>
                     Resume
                 </a>
             </div>
 
             <div className="image">
-                <img src={img1} alt="" />
+                <img src="images/4.jpg" alt="Faizan" />
             </div>
             
             <SocialLinks/>
