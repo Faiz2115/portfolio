@@ -1,5 +1,5 @@
 import React from 'react'
-import SocialLinks from '../components/SocialLinks';
+import './style.scss'
 import { TypeAnimation } from 'react-type-animation';
 
 const Banner = () => {

@@ -1,4 +1,5 @@
-import React, { StrictMode } from 'react'
+import React from 'react'
+import './style.scss'
 import { useState } from 'react';
 import {BsFillArrowUpSquareFill} from 'react-icons/bs'
 const BackToUpButton = ()=> 

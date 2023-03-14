@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { NavLink,Link } from 'react-router-dom'
-const Navbar = () => {
+import './style.scss'
+
+const Header = () => {
 
   const [dark, setDark] = useState(" ")
 
@@ -10,7 +12,7 @@ const Navbar = () => {
   })
 
   return (
-    <nav className={`navbar-container ${dark}`}>
+    <nav className={`header-container ${dark}`}>
       <Link to ='/' className="logo">
         <h1>F<span>aiz</span></h1>
       </Link>
@@ -33,4 +35,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Header

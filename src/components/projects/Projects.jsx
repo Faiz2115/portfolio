@@ -1,4 +1,5 @@
 import React from 'react'
+import './style.scss'
 import { Link, useLocation } from 'react-router-dom';
 import { AiOutlineGithub } from 'react-icons/ai'
 import { TbExternalLink } from 'react-icons/tb'
@@ -56,7 +57,7 @@ const Projects = () => {
               </div>
 
               <div className="image">
-                <img src='images/1.jpg' alt="" />
+                <img src='images/project-1.png' alt="" />
               </div>
 
             </div>

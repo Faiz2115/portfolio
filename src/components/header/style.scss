@@ -1,0 +1,102 @@
+
+// Navbar
+.dark-navbar {
+    background-color: rgb(41, 39, 39);
+  }
+  .active{
+    font-size: 1.2rem !important;
+    padding: .3rem !important;
+    border-bottom: 1px solid orangered;
+  }
+  
+  
+
+.header-container {
+    // border: 2px solid red;
+    background-color: rgb(47, 43, 43);
+    // border-bottom: 1px solid red;
+    height: 2.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3rem 1fr 4fr 1fr 3rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    // gap: 1rem;
+  
+    .logo {
+      grid-column: 2/3;
+      place-self: center;
+      text-decoration: none;
+      h1 {
+        color: whitesmoke;
+        font-size: 1.5rem;
+        letter-spacing: 0.2rem;
+        span {
+          color: orangered;
+        }
+      }
+    }
+    .navlinks {
+      // background-color: red;
+      grid-column: 3/4;
+      grid-row: 1/2;
+      justify-self:right;
+      align-self: center;
+  
+      ul {
+        
+        li {
+          cursor: pointer;
+          list-style: none;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          gap: 3rem;
+          // gap: 20px;
+  
+          a {
+            font-size: 0.8rem;
+            text-decoration: none;
+            color: whitesmoke;
+            // background-color: red;
+            display: flex;
+            padding: 0.1rem;
+            letter-spacing: 0.1rem;
+            font-weight: bolder;
+            animation: slideTop 1.5s ease forwards;
+            // animation-delay: calc(.2s * var(--i));
+            .icons {
+              align-self: center;
+              margin-right: 0.3rem;
+              height: 0.8rem;
+              width: 0.8rem;
+            }
+            &:hover {
+              border-bottom: 1px solid orangered;
+            }
+          }
+        }
+      }
+    }
+    .blog {
+      grid-column: 4/5;
+      align-self: center;
+      justify-self: end;
+  
+      a {
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: rgb(228, 20, 20);
+        padding: 0.2rem 1rem;
+        border: 1px solid red;
+  
+        &:hover {
+          background-color: rgb(214, 112, 75);
+          color: whitesmoke;
+        }
+      }
+    }
+  }
+  

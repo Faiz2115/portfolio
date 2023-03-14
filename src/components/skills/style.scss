@@ -1,0 +1,98 @@
+
+// Skills Section
+
+.skills-container {
+    height: auto;
+    width: 100%;
+    // border: 3px solid red;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 5rem 1fr 5rem;
+    grid-template-rows: 3rem 1fr 4fr 7rem;
+  
+    .title {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      place-self: center;
+  
+      h1 {
+        position: relative;
+        align-self: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+        letter-spacing: 0.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          margin: 0.3rem;
+          color: #dc2f08;
+        }
+        &::before {
+          content: "Skills";
+          position: absolute;
+          font-size: 3rem;
+          opacity: 0.1;
+          letter-spacing: 2.5rem;
+          text-transform: uppercase;
+        }
+      }
+    }
+  
+    .skills {
+      // border: 3px solid rgb(11, 122, 159);
+      grid-column: 2/3;
+      grid-row: 3/4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      .container {
+        // background-color: rgb(19, 85, 200);
+      //   border: 3px solid red;
+      //   border-radius: 8px;
+        width: 20%;
+        height: auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        animation: 2s slideLeft ease;
+  
+        .circular-progress {
+          position: relative;
+          height: 7rem;
+          width: 7rem;
+          border-radius: 50%;
+          // background: conic-gradient(#dc2f08 252deg, rgb(224, 202, 202) 0deg);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+  
+          &::before {
+            content: "";
+            position: absolute;
+            height: 6rem;
+            width: 6rem;
+            border-radius: 50%;
+            background-color: white;
+          }
+          .progress-value {
+            position: relative;
+            font-size: 30px;
+            font-weight: 600;
+            color: #dc2f08;
+          }
+        }
+        .text {
+          font-size: 20px;
+          font-weight: 500;
+          color: #513f3a;
+          margin: 1rem 0 0 0;
+        }
+      }
+    }
+  }
+  

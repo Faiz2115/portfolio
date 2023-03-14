@@ -1,6 +1,6 @@
 import React from 'react'
-import SocialLinks from './SocialLinks'
-
+import './style.scss'
+import SocialLinks from '../socialLinks/SocialLinks'
 const AboutMe = () => {
     return (
         <section className="about-container">

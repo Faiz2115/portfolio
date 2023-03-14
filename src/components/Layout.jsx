@@ -1,9 +1,9 @@
 import React from 'react'
-import Footer from './Footer'
-import Navbar from './Navbar'
+import Footer from './footer/Footer'
+import Navbar from './header/Header'
 import { Outlet } from 'react-router-dom'
-import BackToUpButton from '../components/BackToUpButton'
-import ScrollToTop from '../components/ScrollToTop'
+import BackToUpButton from './backToUp/BackToUpButton'
+import ScrollToTop from './scrollToTop/ScrollToTop'
 
 const Layout = () => {
     return (

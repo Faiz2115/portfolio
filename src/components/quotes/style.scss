@@ -1,0 +1,102 @@
+
+.quotes-section {
+    width: 100%;
+    height: auto;
+  //   border: 3px solid red;
+    padding: 4rem 10rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    gap: .5rem;
+      .title{
+          place-self: center;
+          grid-column: 2/3;
+          animation: pop 1.5s ease-in-out;
+  
+          h1 {
+              color: #dc2f08;
+              position: relative;
+              align-self: center;
+              text-transform: uppercase;
+              font-size: 2rem;
+              letter-spacing: 0.4rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-bottom: 1px solid #dc2f08;
+              &::before {
+                content: "Quotes";
+                position: absolute;
+                font-size: 3rem;
+                opacity: 0.1;
+                letter-spacing: 2.5rem;
+                text-transform: uppercase;
+              }
+            }
+      }
+    .box1 {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      border-top: 10rem solid #dc2f08;
+      border-right: 30rem solid transparent;
+      animation: slideLeft 1s ease;
+    }
+    .box2 {
+      // border: 2px solid blue;
+      grid-column: 3/4;
+      grid-row: 1/2;
+      border-top: 10rem solid #dc2f08;
+      border-left: 30rem solid transparent;
+      animation: slideRight 1s ease;
+  
+    }
+    .box3 {
+      // border: 2px solid black;
+      grid-column: 1/2;
+      grid-row: 3/4;
+      border-bottom: 10rem solid #dc2f08;
+      border-right: 30rem solid transparent;
+      animation: slideLeft 1s ease;
+    }
+    .box4 {
+      border-bottom: 10rem solid #dc2f08;
+      border-left: 30rem solid transparent;
+      grid-column: 3/4;
+      grid-row: 3/4;
+      animation: slideRight 1s ease;
+      // background-color: red;
+    }
+    .quote {
+      // border: 2px solid orange;
+      grid-column: 1/4;
+      grid-row: 2/ 3;
+      place-self: center;
+      text-align: center;
+      h1{
+          
+          font-size: 1.8rem;
+          padding: 1rem;
+          animation: pop 1.5s ease-in-out;
+         
+      }
+      button{
+          letter-spacing: 0.1rem;
+          text-transform: uppercase;
+          border: none;
+          padding: 0.4rem 1rem;
+          margin: 0.4rem;
+          border-radius: 0.2rem;
+          background-color: #dc2f08;
+          color: whitesmoke;
+          font-weight: 600;
+          cursor: pointer;
+          &:hover {
+            background-color: #ec4f2c;
+            transform: translateY(-1px);
+          }
+      }
+    }
+   
+  }
+  
+  

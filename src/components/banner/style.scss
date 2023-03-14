@@ -1,0 +1,67 @@
+// Home-Page
+
+.home-container {
+    position: relative;
+    height: 80vh;
+    // background-color: #2d2b2a;
+    background: linear-gradient(to right, #141e30,  #243b55); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:after{
+      content: "FAIZ";
+      // background-color: red;
+      text-align: center;
+      opacity: .2;
+      letter-spacing: 3rem;
+      position: absolute;
+      font-size: 10rem;
+      transform: skew(35deg,-30deg);
+    }
+      .title {
+      z-index: 1;
+      // border: 1px solid red;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        gap: 2rem;
+        animation: slideLeft 1s ease-in-out;
+        color: whitesmoke;
+        h4{
+        
+          font-size: 3rem;
+         
+        }
+        h5 {
+          font-size: 2rem;
+          color: orangered;;
+          animation: slideRight 1s ease-in-out;
+        }
+        .type-animation {
+          font-size: 2.5rem;
+          color: rgb(245, 246, 250);
+          display: inline;
+          letter-spacing: 0.3rem;
+        }
+      }
+    
+    .image{
+      z-index: 1;
+      height: 40%;
+      width: 30%;
+      // border: 1px solid blue;
+      text-align: center;
+      img{
+        width: 50%;
+        border-radius: 50%;
+        box-shadow: 0px 0px 20px 5px rgb(10, 71, 226);
+        animation: 3s continue infinite;
+      }
+    }
+    
+  }
+  
