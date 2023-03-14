@@ -1,8 +1,11 @@
 import React from 'react'
 import './style.scss'
 import SocialLinks from '../socialLinks/SocialLinks'
+import DivLeft from '../DivAnimation/DivLeft'
+import DivRight from '../DivAnimation/DivRight'
 const AboutMe = () => {
     return (
+
         <section className="about-container">
             <div className="title">
                 <h1>
@@ -17,7 +20,8 @@ const AboutMe = () => {
                 </h2>
             </div>
 
-            <div className="detail">
+
+            <DivLeft className="detail">
                 <h3>
                     Faizan Farooq
                 </h3>
@@ -31,14 +35,15 @@ const AboutMe = () => {
                 <a href='./Faizan.pdf' download>
                     Resume
                 </a>
-            </div>
+            </DivLeft>
 
-            <div className="image">
-                <img src="images/4.jpg" alt="Faizan" />
-            </div>
-            
-            <SocialLinks/>
+            <DivRight className='image'>
+                    <img src="images/4.jpg" alt="Faizan" />
+            </DivRight>
+
+            <SocialLinks />
         </section>
+
     )
 }
 

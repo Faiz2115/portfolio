@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import DivLeft from '../DivAnimation/DivLeft'
 import './style.scss'
 const Skills = () => {
 
@@ -116,9 +117,11 @@ const Skills = () => {
                 {skills.map((item, index) => {
                     return (
                         <div className="container">
+                        <DivLeft>
                             <div className="circular-progress" style={{ background: `conic-gradient(#dc2f08 ${item.percentage / 100 * 360}deg, rgb(224, 202, 202) 0deg)` }}>
                                 <span className='progress-value'>{item.percentage}%</span>
                             </div>
+                        </DivLeft>
                             <span className='text'>
                                 {item.name}
                             </span>
