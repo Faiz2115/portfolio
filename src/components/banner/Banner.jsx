@@ -6,14 +6,11 @@ const Banner = () => {
     return (
         <>
             <section className="home-container">
-                {/* <div className="images">
-                   
-                </div> */}
-
+        
                
                     <div className="title">
                         <h4>Hello, I Am</h4>
-                        <h5>Faiz</h5>
+                        <h5>Faiz.</h5>
                         <h6>
                             <TypeAnimation
                                 sequence={[

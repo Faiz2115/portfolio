@@ -20,10 +20,16 @@ const AboutMe = () => {
                 </h2>
             </div>
 
+            <div className="desc">
 
             <DivLeft className="detail">
                 <h3>
-                    Faizan Farooq
+               
+                    Faizan 
+                
+                    <span>
+                        Farooq
+                    </span>
                 </h3>
                 <h4>
                     Computer Science Engineer
@@ -40,8 +46,9 @@ const AboutMe = () => {
             <DivRight className='image'>
                     <img src="images/4.jpg" alt="Faizan" />
             </DivRight>
+            </div>
 
-            <SocialLinks />
+            {/* <SocialLinks /> */}
         </section>
 
     )

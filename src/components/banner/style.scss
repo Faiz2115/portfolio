@@ -2,12 +2,13 @@
 
 .home-container {
     position: relative;
-    height: 80vh;
+    height: 100vh;
     // background-color: #2d2b2a;
-    background: linear-gradient(to right, #141e30,  #243b55); 
+    // background: linear-gradient(to right, #141e30,  #243b55); 
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid var(--slate);
     &:after{
       content: "FAIZ";
       // background-color: red;
@@ -22,15 +23,16 @@
       z-index: 1;
       // border: 1px solid red;
         width: 50%;
-        height: 100%;
+        height: 80%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        font-size: 3rem;
         gap: 2rem;
+        // font-size: 3rem;
         animation: slideLeft 1s ease-in-out;
-        color: whitesmoke;
+        color: var(--slate);
+
         h4{
         
           font-size: 3rem;
@@ -43,7 +45,7 @@
         }
         .type-animation {
           font-size: 2.5rem;
-          color: rgb(245, 246, 250);
+          // color: rgb(245, 246, 250);
           display: inline;
           letter-spacing: 0.3rem;
         }

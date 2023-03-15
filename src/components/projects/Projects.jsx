@@ -23,20 +23,11 @@ const Projects = () => {
           Projects
         </h1>
       </div>
-      {path === '/' && <div className="latest">
-        <h6>
-          Latest
-        </h6>
-        <Link to='portfolio'>
-          All
-        </Link>
-      </div>}
+    
       <div className="projects">
 
         {item.map((i, index) => {
           return (
-            <>
-
               <DivUp className="item">
 
                 <div className="desc">
@@ -62,13 +53,17 @@ const Projects = () => {
                 </div>
 
               </DivUp>
-
-
-            </>
           )
         })}
       </div>
-
+  {path === '/' && <div className="latest">
+        {/* <h6>
+          Latest
+        </h6> */}
+        <Link to='portfolio'>
+          All
+        </Link>
+      </div>}
 
     </section>
   )

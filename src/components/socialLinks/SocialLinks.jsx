@@ -1,5 +1,6 @@
 import React from 'react'
 import {GrFacebookOption, GrGithub, GrInstagram, GrLinkedin, GrLinkedinOption} from "react-icons/gr"
+import './style.scss'
 const SocialLinks = () => {
   return (
         <div className="social-media">
@@ -24,8 +25,9 @@ const SocialLinks = () => {
                   <GrFacebookOption className='icons'/>
                   </a>
                 </li>
-              
+                
               </ul>
+              <div className="line"></div>
         </div>
 
   )
