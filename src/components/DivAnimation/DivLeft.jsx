@@ -9,7 +9,7 @@ const DivLeft = ({ children, ...props }) => {
             transition={{ duration: 1 }}
             // whileHover={{ scale: 1.1 }}
             // whileTap={{ scale: 0.8 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             {...props}
         >
             {children}

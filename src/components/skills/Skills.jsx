@@ -3,35 +3,6 @@ import DivLeft from '../DivAnimation/DivLeft'
 import './style.scss'
 const Skills = () => {
 
-
-    // const [startValue,setStartValue] = useState(0)
-
-    // const [endValue,setEndValue] = useState(5)
-
-    // useEffect(()=>{
-    //     const interval = setInterval(()=>{
-    //         setStartValue(
-    //             startValue + 1
-    //         )
-
-    //         if (startValue == endValue)
-    //         {
-    //             console.log('done');
-    //             clearInterval(interval)
-    //         }
-    //         console.log(startValue);
-    //         console.log(endValue);
-
-    //     },1000)
-
-    //     return () => {
-    //         clearInterval(interval);
-    //       };
-
-    // },[])
-
-    // const skills = [1,2,3,4,5,6,7,8]
-
     const skills = [
         {
             id: 1,
@@ -118,7 +89,7 @@ const Skills = () => {
                     return (
                         <div className="container">
                         <DivLeft>
-                            <div className="circular-progress" style={{ background: `conic-gradient(#dc2f08 ${item.percentage / 100 * 360}deg, rgb(224, 202, 202) 0deg)` }}>
+                            <div className="circular-progress" style={{ background: `conic-gradient(#64ffda ${item.percentage / 100 * 360}deg, rgb(224, 202, 202) 0deg)` }}>
                                 <span className='progress-value'>{item.percentage}%</span>
                             </div>
                         </DivLeft>

@@ -3,10 +3,10 @@
 .back-to-top {
     position: fixed;
     bottom: 1.5rem;
-    right: 1.5rem;
+    right: 3rem;
     width: 1.5rem;
     height: 1.5rem;
-    color: #dc2f08;
+    color: var(--green);
     font-size: 2rem;
     cursor: pointer;
     transition:1s all ease;

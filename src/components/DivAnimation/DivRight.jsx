@@ -7,7 +7,7 @@ const DivRight = ({ children, ...props }) => {
             initial={{ x: 350, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             {...props}
         >
             {children}

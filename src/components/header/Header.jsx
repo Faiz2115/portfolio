@@ -1,12 +1,20 @@
 import React, { useState,useEffect } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import './style.scss'
+import {RxHamburgerMenu} from 'react-icons/rx'
+import {AiOutlineClose} from 'react-icons/ai'
+
+
 
 const Header = () => {
 
-  // const [dark, setDark] = useState(" ")
   const [show, setShow] = useState("");
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  const [mobileMenu,setMobileMenu] = useState("");
+  const [mobileIcon,setMobileIcon] = 
+  useState(RxHamburgerMenu)
+
 
   const controlNavbar = ()=>{
     if(window.scrollY > 50)
@@ -33,13 +41,26 @@ const Header = () => {
     }
   },[lastScrollY])
 
+  const showHeader = () => {
+
+    if (mobileMenu === '') {
+        setMobileMenu('mobile-view')
+        setMobileIcon(AiOutlineClose)
+    }
+    else {
+      setMobileMenu('')
+      setMobileIcon(RxHamburgerMenu)
+
+    }
+}
+
   return (
-    <navbar className={`header-container ${show}`}>
+    <navbar className={`header-container ${show}  ${mobileMenu} `}>
       <Link to='/' className="logo">
         <h1>F<span>aiz</span></h1>
       </Link>
 
-      <div className="navlinks">
+      <div className={`navlinks`}>
         <ul>
           <li>
             <NavLink to="/" >
@@ -49,23 +70,23 @@ const Header = () => {
               Home
             </NavLink>
 
-            <NavLink to="about" >
+            {/* <NavLink to="about" >
               <span>
                 02.
               </span>
               About
-            </NavLink>
+            </NavLink> */}
 
             <NavLink to="portfolio" >
               <span>
-                03.
+                02.
               </span>
               Projects
             </NavLink>
 
             <NavLink to="about" >
               <span>
-                04.
+                03.
               </span>
               Contact
             </NavLink>
@@ -76,10 +97,14 @@ const Header = () => {
           </li>
         </ul>
       </div>
+          <div className="hamburger-menu"
+          onClick={showHeader}
+          >
+          {mobileIcon}
 
-      {/* <div className="blog">
+          
 
-      </div> */}
+          </div>
     </navbar>
   )
 }

@@ -3,50 +3,44 @@
 .home-container {
     position: relative;
     height: 100vh;
-    // background-color: #2d2b2a;
-    // background: linear-gradient(to right, #141e30,  #243b55); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid var(--slate);
-    &:after{
-      content: "FAIZ";
-      // background-color: red;
-      text-align: center;
-      opacity: .2;
-      letter-spacing: 3rem;
-      position: absolute;
-      font-size: 10rem;
-      transform: skew(35deg,-30deg);
-    }
+    padding: 2rem;
+    background-color: var(--black);
       .title {
-      z-index: 1;
-      // border: 1px solid red;
-        width: 50%;
+        z-index: 1;
+        // border: 1px solid red;
+        width: 60%;
         height: 80%;
+        margin: auto;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
-        gap: 2rem;
+        gap: 1.2rem;
         // font-size: 3rem;
         animation: slideLeft 1s ease-in-out;
         color: var(--slate);
-
+        line-height: 3rem;
         h4{
         
-          font-size: 3rem;
+          font-size: .8rem;
+          margin: .5rem 0;
+          color: var(--green);
          
         }
         h5 {
-          font-size: 2rem;
-          color: orangered;;
+          font-size: 3rem;
+          color: var(--light);;
           animation: slideRight 1s ease-in-out;
         }
+        h6{
+          font-size: 1.5rem;
+        }
         .type-animation {
-          font-size: 2.5rem;
-          // color: rgb(245, 246, 250);
-          display: inline;
+          // width: 100%;
+          // background-color: red;
+          font-size: 2rem;
+          color: rgb(245, 246, 250);
+          // display: inline;
           letter-spacing: 0.3rem;
         }
       }
@@ -65,5 +59,16 @@
       }
     }
     
+}
+
+
+@media only screen and (max-width:600px) 
+{
+  html{
+    font-size: 14px !important;
+
   }
-  
+  .home-container{
+    padding: 0;
+  }
+}
